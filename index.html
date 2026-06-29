@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Games for Lili is an indie game studio building healthy browser games for kids — no ads, no tracking, no dark patterns.">
+    <meta name="description" content="Games for Lili creates healthy browser games for kids and families — calm indie play with no ads, no tracking, no dark patterns, and no noisy tricks.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://www.gamesforlili.xyz/">
@@ -13,17 +13,23 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://www.gamesforlili.xyz/">
     <meta property="og:title" content="Games for Lili — Healthy Browser Games for Kids">
-    <meta property="og:description" content="Games for Lili is an indie game studio building healthy browser games for kids — no ads, no tracking, no dark patterns.">
+    <meta property="og:description" content="Games for Lili creates healthy browser games for kids and families — calm indie play with no ads, no tracking, no dark patterns, and no noisy tricks.">
     <meta property="og:site_name" content="Games for Lili">
     <meta property="og:image" content="https://www.gamesforlili.xyz/logo.png">
+    <meta property="og:image:secure_url" content="https://www.gamesforlili.xyz/logo.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:alt" content="Games for Lili logo">
     <meta property="og:image:width" content="1254">
     <meta property="og:image:height" content="1254">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@slopshipper">
+    <meta name="twitter:creator" content="@slopshipper">
+    <meta name="twitter:url" content="https://www.gamesforlili.xyz/">
     <meta name="twitter:title" content="Games for Lili — Healthy Browser Games for Kids">
-    <meta name="twitter:description" content="Games for Lili is an indie game studio building healthy browser games for kids — no ads, no tracking, no dark patterns.">
+    <meta name="twitter:description" content="Games for Lili creates healthy browser games for kids and families — calm indie play with no ads, no tracking, no dark patterns, and no noisy tricks.">
     <meta name="twitter:image" content="https://www.gamesforlili.xyz/logo.png">
     <meta name="twitter:image:alt" content="Games for Lili logo">
     <title>Games for Lili — Healthy Browser Games for Kids</title>
@@ -34,7 +40,7 @@
         "name": "Games for Lili",
         "url": "https://www.gamesforlili.xyz/",
         "logo": "https://www.gamesforlili.xyz/logo.png",
-        "description": "Games for Lili is an indie game studio building healthy browser games for kids — no ads, no tracking, no dark patterns.",
+        "description": "Games for Lili creates healthy browser games for kids and families — calm indie play with no ads, no tracking, no dark patterns, and no noisy tricks.",
         "sameAs": [
           "https://x.com/slopshipper",
           "https://github.com/reposlayer"
@@ -72,7 +78,8 @@
       }
 
       .site-header,
-      .site-footer {
+      .site-footer,
+      .content {
         width: 100%;
         padding: 18px clamp(18px, 4vw, 48px);
       }
@@ -80,7 +87,8 @@
       .site-header {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 24px;
       }
 
       .brand-link,
@@ -91,8 +99,37 @@
       }
 
       .brand-link {
+        color: #fffaf1;
         border-radius: 999px;
         text-decoration: none;
+      }
+
+      .brand-wordmark {
+        font-size: 1rem;
+        font-weight: 750;
+      }
+
+      .site-nav,
+      .footer-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .site-nav a,
+      .footer-links a,
+      .hero-link {
+        color: rgba(255, 250, 241, 0.72);
+        font-size: 0.92rem;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .site-nav a:hover,
+      .footer-links a:hover,
+      .hero-link:hover {
+        color: #fffaf1;
       }
 
       .logo-frame {
@@ -117,8 +154,14 @@
       .hero {
         display: grid;
         place-items: center;
-        padding: 56px 20px;
+        padding: 56px 20px 48px;
         text-align: center;
+      }
+
+      .hero-inner {
+        display: grid;
+        justify-items: center;
+        gap: 22px;
       }
 
       h1 {
@@ -127,6 +170,53 @@
         font-size: clamp(2.7rem, 10vw, 8rem);
         line-height: 0.95;
         font-weight: 750;
+      }
+
+      .hero-copy {
+        max-width: 700px;
+        margin: 0;
+        color: rgba(255, 250, 241, 0.76);
+        font-size: clamp(1.02rem, 2vw, 1.22rem);
+        line-height: 1.7;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        padding-top: 0;
+        padding-bottom: 64px;
+      }
+
+      .content-section {
+        min-height: 260px;
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid rgba(255, 250, 241, 0.12);
+      }
+
+      .content-section h2 {
+        margin: 0 0 18px;
+        color: #fffaf1;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        line-height: 1.1;
+      }
+
+      .content-section p,
+      .content-section li {
+        color: rgba(255, 250, 241, 0.74);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .content-section p {
+        margin: 0;
+      }
+
+      .content-section ul {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding-left: 1.1rem;
       }
 
       .site-footer {
@@ -159,8 +249,22 @@
 
       @media (max-width: 640px) {
         .site-header,
-        .site-footer {
+        .site-footer,
+        .content {
           padding: 16px 18px;
+        }
+
+        .site-header {
+          align-items: flex-start;
+        }
+
+        .brand-wordmark {
+          display: none;
+        }
+
+        .site-nav {
+          justify-content: flex-end;
+          gap: 12px;
         }
 
         .logo-frame {
@@ -177,6 +281,11 @@
         .site-footer {
           flex-direction: column;
           align-items: flex-start;
+        }
+
+        .content {
+          grid-template-columns: 1fr;
+          padding-bottom: 44px;
         }
 
         .footer-logo {
@@ -197,11 +306,37 @@
           <span class="logo-frame">
             <img class="brand-logo" src="/logo.png" alt="Games for Lili logo" width="1254" height="1254">
           </span>
+          <span class="brand-wordmark">Games for Lili</span>
         </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#games">Games</a>
+          <a href="#promise">Promise</a>
+          <a href="https://x.com/slopshipper" rel="me noopener">X</a>
+          <a href="https://github.com/reposlayer/games-for-lili" rel="noopener">GitHub</a>
+        </nav>
       </header>
       <main class="hero">
-        <h1>Games for Lili</h1>
+        <div class="hero-inner">
+          <h1>Games for Lili</h1>
+          <p class="hero-copy">Healthy browser games for kids and families, made with calm pacing, clear rules, and a promise to avoid ads, tracking, dark patterns, and noisy tricks.</p>
+          <a class="hero-link" href="#promise">Read the promise</a>
+        </div>
       </main>
+      <section id="games" class="content" aria-label="About Games for Lili">
+        <article class="content-section">
+          <h2>Small games with a softer pace</h2>
+          <p>Games for Lili is an indie studio for browser games that are simple to open, easy to understand, and gentle enough for repeated play. The focus is on healthy game loops: curiosity, practice, imagination, and little moments of progress without pressure.</p>
+        </article>
+        <article id="promise" class="content-section">
+          <h2>No ads, no tracking, no dark patterns</h2>
+          <ul>
+            <li>No behavioral advertising or third-party analytics scripts.</li>
+            <li>No manipulative timers, loot boxes, or attention traps.</li>
+            <li>No accounts required just to play a small browser game.</li>
+            <li>No loud clutter where a calm game would do better.</li>
+          </ul>
+        </article>
+      </section>
       <footer class="site-footer">
         <div class="footer-brand">
           <span class="logo-frame">
@@ -210,6 +345,10 @@
           <span class="footer-name">Games for Lili</span>
         </div>
         <p class="footer-line">Healthy browser games for kids — no ads, no tracking, no dark patterns.</p>
+        <nav class="footer-links" aria-label="Social links">
+          <a href="https://x.com/slopshipper" rel="me noopener">X</a>
+          <a href="https://github.com/reposlayer/games-for-lili" rel="noopener">GitHub</a>
+        </nav>
       </footer>
     </div>
   </body>
